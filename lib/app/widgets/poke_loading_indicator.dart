@@ -71,7 +71,7 @@ class _PokeLoadingIndicatorState extends State<PokeLoadingIndicator>
                   borderRadius: BorderRadius.circular(Sizes.p48),
                   boxShadow: [
                     AppShadows.neumorphicShadow,
-                    AppShadows.neumorphicShadowInvert,
+                    AppShadows.neumorphicShadowInverted,
                   ],
                 ),
                 child: CircularProgressIndicator(

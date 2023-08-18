@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pokipoke/app/constants/app_sizes.dart';
 import 'package:pokipoke/app/routes/app_routes.dart';
 import 'package:pokipoke/app/widgets/poke_loading_indicator.dart';
 
@@ -15,8 +16,8 @@ class SplashPage extends StatefulWidget {
   State<SplashPage> createState() => _SplashPageState();
 }
 
-class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateMixin {
-
+class _SplashPageState extends State<SplashPage>
+    with SingleTickerProviderStateMixin {
   /// The animation controller for the splash animation.
   late AnimationController _controller;
 
@@ -48,7 +49,7 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           PokeLoadingIndicator(duration: duration),
-          const SizedBox(height: 16),
+          gapH16,
           Text(
             'Your poke app is loading...',
             style: Theme.of(context).textTheme.titleLarge,

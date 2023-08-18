@@ -26,7 +26,7 @@ class AppShadows {
     spreadRadius: 2,
   );
 
-  /// [neumorphicShadowInvert] it'a a shadow configuration for inverted components.
+  /// [neumorphicShadowInverted] it'a a shadow configuration for inverted components.
   ///
   /// This `neumorphicShadowInvert` configuration defines a shadow with
   /// characteristics suitable for the inverted neumorphic design style.
@@ -37,7 +37,7 @@ class AppShadows {
   /// * blurRadius: 10
   /// * spreadRadius: 2
   ///
-  static BoxShadow neumorphicShadowInvert = const BoxShadow(
+  static BoxShadow neumorphicShadowInverted = const BoxShadow(
     color: Colors.white,
     offset: Offset(-5, -5),
     blurRadius: 10,
