@@ -8,7 +8,10 @@ class PokeSearchBar extends StatelessWidget {
   /// [PokeSearchBar] is an search bar widget with neumorphic design.
   /// This widget is used among the app
   ///
-  const PokeSearchBar({super.key});
+  const PokeSearchBar({super.key, required this.onChanged});
+
+  /// [onChanged] is the callback that is called when the user types in the search bar.
+  final ValueChanged<String> onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +32,7 @@ class PokeSearchBar extends StatelessWidget {
             color: Colors.grey[700],
             fontWeight: FontWeight.w500,
           ),
+          onChanged: onChanged,
           decoration: InputDecoration(
             suffixIcon: Icon(
               Icons.search,

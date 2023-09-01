@@ -7,7 +7,14 @@ import 'package:pokipoke/app/theme/app_shadows.dart';
 class NeumorphicCard extends StatelessWidget {
   /// [NeumorphicCard] is a Card widget with neumorphic design.
   ///
-  const NeumorphicCard({super.key});
+  const NeumorphicCard({
+    required this.title,
+    required this.subtitle,
+    super.key,
+  });
+
+  final String title;
+  final String subtitle;
 
   @override
   Widget build(BuildContext context) {
@@ -23,17 +30,18 @@ class NeumorphicCard extends StatelessWidget {
           AppShadows.neumorphicShadowInverted,
         ],
       ),
-      child: const Padding(
-        padding: EdgeInsets.all(Sizes.p16),
+      child: Padding(
+        padding: const EdgeInsets.all(Sizes.p16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Pikachu',
-              style: TextStyle(fontSize: Sizes.p8, fontWeight: FontWeight.bold),
+              title,
+              style: const TextStyle(
+                  fontSize: Sizes.p8, fontWeight: FontWeight.bold),
             ),
             gapH8,
-            Text('Electric Type'),
+            Text(subtitle),
           ],
         ),
       ),

@@ -5,7 +5,11 @@ import 'package:pokipoke/app/widgets/poke_search_bar.dart';
 
 /// [PokeAppBar] is a widget that represents the app bar
 class PokeAppBar extends StatelessWidget {
-  const PokeAppBar({super.key});
+  /// [PokeAppBar] is an app bar widget with neumorphic design.
+  const PokeAppBar({super.key, required this.onChanged});
+
+  /// [onChanged] is the callback that is called when the user types in the search bar.
+  final ValueChanged<String> onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -22,17 +26,19 @@ class PokeAppBar extends StatelessWidget {
             AppShadows.neumorphicShadowInverted,
           ],
         ),
-        child: const Column(
+        child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
+            const SizedBox(
               height: kToolbarHeight,
             ),
             gapH16,
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              child: PokeSearchBar(),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: PokeSearchBar(
+                onChanged: onChanged,
+              ),
             ),
             gapH48,
           ],

@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:pokipoke/app/features/home/home_page.dart';
+import 'package:pokipoke/app/features/home/presentation/home_page.dart';
 import 'package:pokipoke/app/features/splash/splash_page.dart';
 import 'package:pokipoke/app/routes/app_routes.dart';
 
